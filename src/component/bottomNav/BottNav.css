@@ -1,0 +1,144 @@
+/* BOTTOM NAVIGATION */
+
+.bottom-nav-wrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .bottom-nav-wrapper {
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .bottom-nav {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .bottom-nav-wrapper {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1200;
+    background: transparent;
+  }
+
+  .bottom-nav {
+    margin: 0;
+    width: 100%;
+    min-height: 78px;
+    background: #171411;
+    border: 1px solid rgba(255, 157, 40, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 7px 5px;
+    box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.18);
+  }
+
+  /* NAV ITEM */
+
+  .bottom-nav-item {
+    flex: 1;
+    min-width: 0;
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #a99b8b;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  /* ICON */
+
+  .bottom-nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    transition: 0.3s ease;
+  }
+
+  .bottom-nav-icon svg {
+    font-size: 23px;
+  }
+
+  /* LABEL */
+
+  .bottom-nav-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.3s ease;
+  }
+
+  /* ACTIVE ITEM */
+
+  .bottom-nav-item.active {
+    color: #ff9d28;
+    background: rgba(255, 157, 40, 0.10);
+  }
+
+  .bottom-nav-item.active .bottom-nav-icon {
+    transform: translateY(-2px);
+  }
+
+  .bottom-nav-item.active .bottom-nav-label {
+    color: #ff9d28;
+  }
+
+  /* HOVER */
+
+  .bottom-nav-item:active {
+    transform: scale(0.94);
+  }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+  .bottom-nav-wrapper {
+    padding: 0 7px 8px;
+  }
+
+  .bottom-nav {
+    min-height: 64px;
+    padding: 5px 2px;
+  }
+
+  .bottom-nav-item {
+    height: 50px;
+    gap: 3px;
+  }
+
+  .bottom-nav-icon svg {
+    font-size: 21px;
+  }
+
+  .bottom-nav-label {
+    font-size: 9px;
+  }
+
+}
+
+/* PREVENT CONTENT HIDING BEHIND BOTTOM NAV */
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 85px;
+    background: #000;
+  }
+}
